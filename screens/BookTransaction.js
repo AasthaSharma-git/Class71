@@ -64,7 +64,7 @@ class BookTransaction extends React.Component {
     })
   }
   initiateBookIssue=async ()=>{
-  db.collection("transaction").add({
+  db.collection("transactions").add({
     'studentId':this.state.scannedStudentId,
     'bookId':this.state.scannedBookId,
     'date':firebase.firestore.Timestamp.now().toDate(),
@@ -84,7 +84,7 @@ class BookTransaction extends React.Component {
 console.log('Function called!')
   }
   initiateBookReturn=async ()=>{
-     db.collection("transaction").add({
+     db.collection("transactions").add({
     'studentId':this.state.scannedStudentId,
     'bookId':this.state.scannedBookId,
     'date':firebase.firestore.Timestamp.now().toDate(),
